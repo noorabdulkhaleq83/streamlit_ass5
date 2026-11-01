@@ -22,13 +22,13 @@ bio = st.text_area("Short bio (2–3 sentences)")
 ready = st.checkbox("I am ready to generate my card")
 # ── Reaction ──────────────────────────────────────────────────
 if st.button("Generate Card 🪪"):
-if not ready:
-st.warning("Please tick the checkbox first.")
-elif not name.strip():
-st.error("Please enter your name.")
-else:
-st.success(f"✅ Card generated for **{name}**!")
-st.markdown(f"""
+    if not ready:
+        st.warning("Please tick the checkbox first.")
+    elif not name.strip():
+        st.error("Please enter your name.")
+    else:
+        st.success(f"✅ Card generated for **{name}**!")
+        st.markdown(f"""
 | Field | Value |
 |--------|-------|
 | Name | {name} |
@@ -39,4 +39,4 @@ st.markdown(f"""
 > *{bio}*
 """)
 
-st.code(f'st.write("Hello, {name}!")', language="python")
+        st.code(f'st.write("Hello, {name}!")', language="python")
